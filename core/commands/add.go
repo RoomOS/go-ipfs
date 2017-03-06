@@ -79,7 +79,7 @@ You can now refer to the added file in a gateway, like so:
 		cmds.StringOption(chunkerOptionName, "s", "Chunking algorithm to use."),
 		cmds.BoolOption(pinOptionName, "Pin this object when adding.").Default(true),
 		cmds.BoolOption(rawLeavesOptionName, "Use raw blocks for leaf nodes. (experimental)"),
-		cmds.IntOption(cidVersionOptionName, "Cid version. (experimental)").Default(0),
+		cmds.IntOption(cidVersionOptionName, "Cid version. Non-zero value will change default of 'raw-leaves' to true. (experimental)").Default(0),
 	},
 	PreRun: func(req cmds.Request) error {
 		quiet, _, _ := req.Option(quietOptionName).Bool()
